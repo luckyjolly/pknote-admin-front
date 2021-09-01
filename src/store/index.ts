@@ -1,7 +1,7 @@
 import { createStore } from 'vuex'
 import menuStore from './modules/menu'
 
-interface State {
+export interface GlobalStore {
   count: number
 }
 
@@ -9,10 +9,10 @@ const store = createStore({
   state() {
     return {
       count: 0
-    } as State
+    } as GlobalStore
   },
   mutations: {
-    increase(state: State) {
+    increase(state: GlobalStore) {
       state.count++
     }
   },
